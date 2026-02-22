@@ -17,8 +17,9 @@ function App() {
   return (
     <>
       <Header />
+            <div className="relative w-full overflow-x-hidden ">
       <Hero />
-      <About />
+      <About /></div>
     </>
   );
 }

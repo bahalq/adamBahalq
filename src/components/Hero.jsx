@@ -11,12 +11,11 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative w-full overflow-hidden ">
         <MotionDiv
           animate={{ x: ["30%", "-50%"] }}
           transition={{ duration: 6, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute sm:w-150 w-[50%] sm:h-100 h-130 bg-purple-700/40 blur-[150px] 
-      rounded-full top-1/4 left-1/3"
+          className="absolute sm:w-150 w-[50%] sm:h-150 bg-purple-700/30 blur-[150px] 
+      rounded-full top-1/5 left-1/3"
         ></MotionDiv>
         <MotionDiv
           initial={{ opacity: 0, y: 80 }}
@@ -55,7 +54,6 @@ export default function Hero() {
             {t("hero.contacts")}
           </a>
         </MotionDiv>
-      </div>
     </>
   );
 }
