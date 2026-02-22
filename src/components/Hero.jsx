@@ -18,7 +18,7 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         id="home"
-        className="flex sm:border border-white sm:m-5 sm:mt-20 flex-col min-h-screen mt-16 
+        className="flex sm:border overflow-hidden border-white sm:m-5 sm:mt-20 flex-col min-h-screen mt-16 
          justify-center items-center"
       >
         <div className="flex md:flex-row flex-col justify-center gap-5 items-center z-10">

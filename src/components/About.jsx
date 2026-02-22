@@ -76,7 +76,7 @@ export default function About() {
 
   return (
     <div
-      className="sm:min-h-screen flex flex-col lg:flex-row sm:border sm:m-5 items-center justify-center gap-20 px-6 lg:px-20 bg-gradient-to-b from-black via-gray-950 to-black text-white relative overflow-hidden"
+      className="sm:min-h-screen flex flex-col lg:flex-row sm:border sm:m-5 items-center justify-center gap-20 px-6 lg:px-20 bg-linear-to-b from-black via-gray-950 to-black text-white relative overflow-hidden"
       id="about"
     >
       <div className="absolute w-125 h-125 bg-purple-600/20 blur-[120px] rounded-full top-1/3 left-1/4 -z-10"></div>
