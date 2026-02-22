@@ -11,14 +11,14 @@ export default function Hero() {
 
   return (
     <>
-      <MotionDiv animate={{x:[150,-240]}} transition={{duration:3,repeat:Infinity,repeatType:'reverse'}}  className="absolute sm:w-150 w-[50%] h-150 bg-purple-700/30 blur-[150px] 
-      rounded-full sm:top-1/5 top-1/4 left-1/3 animate-"></MotionDiv>
+      <MotionDiv className="absolute sm:w-150 w-[50%] h-150 bg-purple-700/30 blur-[150px] 
+      rounded-full top-1/4 left-1/3"></MotionDiv>
       <MotionDiv
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         id="home"
-        className="flex sm:border overflow-hidden border-white sm:m-5 sm:mt-20 flex-col min-h-screen mt-16 
+        className="flex max-w-screen sm:border border-white sm:m-5 sm:mt-20 flex-col min-h-screen mt-16 
          justify-center items-center"
       >
         <div className="flex md:flex-row flex-col justify-center gap-5 items-center z-10">
