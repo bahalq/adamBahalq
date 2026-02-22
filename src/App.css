@@ -1,0 +1,18 @@
+@import "tailwindcss";
+/* h1 {
+    font-family:monospace;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    animation: typing 2s steps(11)  ;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+    to {
+        width: 11ch;
+    }
+} */
