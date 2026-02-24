@@ -9,7 +9,7 @@ export default function Header() {
   const { t, i18n } = useTranslation();
 
   useMotionValueEvent(scrollY, "change", (current) => {
-    const previous = (scrollY.getPrevious() ?? 0) + 0.1;
+    const previous = (scrollY.getPrevious() ?? 0);
     if (current > previous && current > 150) {
       setHidden(true);
     } else {
@@ -33,6 +33,10 @@ export default function Header() {
         </a>
         <a href="#about" className="text-gray-400 relative group">
           {t("header.about")}
+          <span className="absolute left-1/2 bottom-0 h-px bg-gray-300 w-full -translate-x-1/2 scale-x-50 group-hover:scale-x-100 origin-center transition-transform duration-300"></span>
+        </a>
+        <a href="#projects" className="text-gray-400 relative group">
+          {t("projects.title")}
           <span className="absolute left-1/2 bottom-0 h-px bg-gray-300 w-full -translate-x-1/2 scale-x-50 group-hover:scale-x-100 origin-center transition-transform duration-300"></span>
         </a>
         <div className="flex items-center gap-2">

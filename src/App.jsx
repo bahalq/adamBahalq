@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Header from "./components/Header";
 import About from "./components/About";
 import { useTranslation } from "react-i18next";
+import Projects from "./components/Projects";
 
 function App() {
   const { i18n } = useTranslation();
@@ -20,6 +21,7 @@ function App() {
             <div className="relative w-full overflow-x-hidden ">
       <Hero />
       <About /></div>
+      <Projects/>
     </>
   );
 }
