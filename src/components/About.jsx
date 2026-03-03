@@ -53,7 +53,7 @@ function MagneticButton({ label }) {
 
   return (
     <MotionA
-      href="/Adam_Bahalq.docx"
+      href="/Adam_Bahalq_CV_2026.pdf"
       download
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
