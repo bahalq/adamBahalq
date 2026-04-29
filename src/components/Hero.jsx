@@ -28,7 +28,8 @@ export default function Hero() {
         <div className="flex md:flex-row flex-col justify-center gap-5 items-center z-10">
           <div className="w-fi h-[40vh] relative group aspect-square">
             <img
-              src="/adam2.png"
+              src={import.meta.env.BASE_URL + "adam2.png"}
+              draggable={false}
               onDragStart={(e) => e.preventDefault()}
               className="aspect-square select-none h-[40vh] rounded-full border border-gray-700
               "

@@ -30,10 +30,16 @@ const resources = {
         items: [
           {
             id: 1,
-            name: "bookMyPitch",
+            name: "Zizou",
             description:
               "A comprehensive booking system for sports venues featuring real-time availability and a dynamic 6-step reservation flow.",
-            techStack: ["React", "Tailwind CSS", "PHP", "MySQL", "REST API"],
+            techStack: [
+              "React",
+              "Tailwind CSS",
+              "Laravel",
+              "MySQL",
+              "REST API",
+            ],
             features: [
               "Multi-user roles (Admin/Client)",
               "Automated price calculation",
@@ -41,12 +47,12 @@ const resources = {
               "Responsive interactive calendar",
             ],
             links: {
-              github: "https://github.com/bahalq/booking-app-frontend",
-              demo: "https://bookmypitch.vercel.app/",
+              github: "https://github.com/bahalq/frontend-last",
+              demo: "https://bahalq.github.io/frontend-last/",
             },
             status: "In Progress",
             year: "2026",
-            image: "/bookmypitch.png",
+            image: import.meta.env.BASE_URL + "Zizou.png",
           },
           {
             id: 2,
@@ -67,7 +73,7 @@ const resources = {
             },
             status: "Completed",
             year: "2025",
-            image: "/tic-tac-toe-ai.png",
+            image: import.meta.env.BASE_URL + "tic-tac-toe-ai.png",
           },
           {
             id: 7,
@@ -87,7 +93,7 @@ const resources = {
             },
             status: "Completed",
             year: "2025",
-            image: "/calculator.png",
+            image: import.meta.env.BASE_URL + "calculator.png",
           },
         ],
       },
@@ -121,10 +127,16 @@ const resources = {
         items: [
           {
             id: 1,
-            name: "bookMyPitch",
+            name: "Zizou",
             description:
               "Un systeme complet de reservation de terrains sportifs avec disponibilite en temps reel et un parcours dynamique en 6 etapes.",
-            techStack: ["React", "Tailwind CSS", "PHP", "MySQL", "REST API"],
+            techStack: [
+              "React",
+              "Tailwind CSS",
+              "Laravel",
+              "MySQL",
+              "REST API",
+            ],
             features: [
               "Roles multi-utilisateurs (Admin/Client)",
               "Calcul automatique des prix",
@@ -132,12 +144,12 @@ const resources = {
               "Calendrier interactif responsive",
             ],
             links: {
-              github: "https://github.com/bahalq/booking-app-frontend",
-              demo: "https://bookmypitch.vercel.app/",
+              github: "https://github.com/bahalq/frontend-last",
+              demo: "https://bahalq.github.io/frontend-last/",
             },
             status: "En cours",
             year: "2026",
-            image: "/bookmypitch.png",
+            image: import.meta.env.BASE_URL + "Zizou.png",
           },
           {
             id: 2,
@@ -158,7 +170,7 @@ const resources = {
             },
             status: "Termine",
             year: "2025",
-            image: "/tic-tac-toe-ai.png",
+            image: import.meta.env.BASE_URL + "tic-tac-toe-ai.png",
           },
           {
             id: 7,
@@ -178,7 +190,7 @@ const resources = {
             },
             status: "Termine",
             year: "2025",
-            image: "/calculator.png",
+            image: import.meta.env.BASE_URL + "calculator.png",
           },
         ],
       },
@@ -192,17 +204,20 @@ const resources = {
       },
       hero: {
         sequence: {
-          welcome: "\u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0645\u0644\u0641 \u0623\u0639\u0645\u0627\u0644\u064A",
+          welcome:
+            "\u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0645\u0644\u0641 \u0623\u0639\u0645\u0627\u0644\u064A",
           name: "\u0623\u0646\u0627 \u0622\u062F\u0645 \u0628\u062D\u0627\u0644\u0642",
           role: "\u0623\u0646\u0627 \u0645\u0637\u0648\u0631 Full Stack",
         },
-        contacts: "\u062C\u0647\u0627\u062A \u0627\u0644\u0627\u062A\u0635\u0627\u0644",
+        contacts:
+          "\u062C\u0647\u0627\u062A \u0627\u0644\u0627\u062A\u0635\u0627\u0644",
       },
       about: {
         title: "\u0646\u0628\u0630\u0629 \u0639\u0646\u064A",
         description:
           "\u0623\u0646\u0627 \u0645\u0637\u0648\u0631 \u0648\u064A\u0628 \u0645\u062A\u0643\u0627\u0645\u0644 \u0634\u063A\u0648\u0641 \u0628\u0628\u0646\u0627\u0621 \u062A\u0637\u0628\u064A\u0642\u0627\u062A \u0648\u064A\u0628 \u062D\u062F\u064A\u062B\u0629 \u0648\u0639\u0627\u0644\u064A\u0629 \u0627\u0644\u0623\u062F\u0627\u0621 \u0648\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u062A\u0648\u0633\u0639. \u0623\u0633\u062A\u0645\u062A\u0639 \u0628\u062D\u0644 \u0627\u0644\u0645\u0634\u0643\u0644\u0627\u062A \u0627\u0644\u0645\u0639\u0642\u062F\u0629\u060C \u0648\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0623\u062F\u0627\u0621\u060C \u0648\u062A\u0637\u0648\u064A\u0631 \u062E\u0628\u0631\u062A\u064A \u0627\u0644\u062A\u0642\u0646\u064A\u0629 \u0628\u0634\u0643\u0644 \u0645\u0633\u062A\u0645\u0631.",
-        downloadCv: "\u062A\u062D\u0645\u064A\u0644 \u0627\u0644\u0633\u064A\u0631\u0629 \u0627\u0644\u0630\u0627\u062A\u064A\u0629",
+        downloadCv:
+          "\u062A\u062D\u0645\u064A\u0644 \u0627\u0644\u0633\u064A\u0631\u0629 \u0627\u0644\u0630\u0627\u062A\u064A\u0629",
         moveMe: "\u062D\u0631\u0651\u0643\u0646\u064A",
       },
       projects: {
@@ -223,12 +238,13 @@ const resources = {
               "\u062A\u0642\u0648\u064A\u0645 \u062A\u0641\u0627\u0639\u0644\u064A \u0645\u062A\u062C\u0627\u0648\u0628",
             ],
             links: {
-              github: "https://github.com/bahalq/booking-app-frontend",
-              demo: "https://bookmypitch.vercel.app/",
+              github: "https://github.com/bahalq/frontend-last",
+              demo: "https://bahalq.github.io/frontend-last/",
             },
-            status: "\u0642\u064A\u062F \u0627\u0644\u0625\u0646\u062C\u0627\u0632",
+            status:
+              "\u0642\u064A\u062F \u0627\u0644\u0625\u0646\u062C\u0627\u0632",
             year: "2026",
-            image: "/bookmypitch.png",
+            image: import.meta.env.BASE_URL + "Zizou.png",
           },
           {
             id: 2,
@@ -249,7 +265,7 @@ const resources = {
             },
             status: "\u0645\u0643\u062A\u0645\u0644",
             year: "2025",
-            image: "/tic-tac-toe-ai.png",
+            image: import.meta.env.BASE_URL + "tic-tac-toe-ai.png",
           },
           {
             id: 7,
@@ -269,7 +285,7 @@ const resources = {
             },
             status: "\u0645\u0643\u062A\u0645\u0644",
             year: "2025",
-            image: "/calculator.png",
+            image: import.meta.env.BASE_URL + "calculator.png",
           },
         ],
       },

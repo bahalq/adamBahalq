@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 function InfoModel() {
   const infosRef = useRef();
-  const infos = useLoader(GLTFLoader, "/highpoly_info_sign_3d_icon.glb");
+  const infos = useLoader(GLTFLoader, import.meta.env.BASE_URL + "highpoly_info_sign_3d_icon.glb");
   const [hovered, setHovered] = useState(false);
 
   useFrame((state, delta) => {
@@ -53,7 +53,7 @@ function MagneticButton({ label }) {
 
   return (
     <MotionA
-      href="/Adam_Bahalq_CV_2026.pdf"
+      href={import.meta.env.BASE_URL + "Adam_Bahalq_CV_2026.pdf"}
       download
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
