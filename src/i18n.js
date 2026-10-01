@@ -44,7 +44,7 @@ const resources = {
         title: "About Me",
         description:
           "An application only has value if it solves a real problem. As a Full Stack Developer, I begin every project with one question: who is it for, and what does it make simpler? From salary grids and variable bonuses in an HR application to reservations and access control for smart parking, I build concrete solutions with React, Laravel, and MySQL, and I am looking for a team that shares this vision.",
-        downloadCv: "Download CV",
+        downloadCv: "Open CV",
         moveMe: "Move me",
       },
       projects: {
@@ -180,7 +180,7 @@ const resources = {
         title: "A propos de moi",
         description:
           "Une application n'a de valeur que si elle résout un vrai problème. Développeur Full Stack, je commence chaque projet par une seule question : à qui cela sert-il, et qu'est-ce que cela simplifie ? Des grilles salariales et primes variables d'une application RH aux réservations et contrôles d'accès d'un parking intelligent, je construis avec React, Laravel et MySQL des solutions concrètes, et je recherche une équipe qui partage cette vision.",
-        downloadCv: "Telecharger CV",
+        downloadCv: "Ouvrir le CV",
         moveMe: "Deplace-moi",
       },
       projects: {
@@ -315,8 +315,7 @@ const resources = {
         title: "\u0646\u0628\u0630\u0629 \u0639\u0646\u064A",
         description:
           "لا قيمة لأي تطبيق إن لم يحل مشكلة حقيقية. بصفتي مطور Full Stack، أبدأ كل مشروع بسؤال واحد: لمن يخدم، وما الذي يجعله أبسط؟ من شبكات الرواتب والمنح المتغيرة في تطبيق للموارد البشرية، إلى الحجوزات والتحكم في الولوج لمواقف سيارات ذكية، أبني حلولاً عملية باستخدام React وLaravel وMySQL، وأبحث عن فريق يشارك هذه الرؤية.",
-        downloadCv:
-          "\u062A\u062D\u0645\u064A\u0644 \u0627\u0644\u0633\u064A\u0631\u0629 \u0627\u0644\u0630\u0627\u062A\u064A\u0629",
+        downloadCv: "فتح السيرة الذاتية",
         moveMe: "\u062D\u0631\u0651\u0643\u0646\u064A",
       },
       projects: {

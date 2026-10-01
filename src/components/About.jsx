@@ -80,10 +80,11 @@ export default function About() {
           ))}
         </MotionDiv>
 
-        <div ref={moveAreaRef} className="relative h-24 w-64">
+        <div ref={moveAreaRef} className="relative h-36 w-64">
           <a
             href={import.meta.env.BASE_URL + "Adam_Bahalq_CV_2026.pdf"}
-            download
+            target="_blank"
+            rel="noreferrer"
             className="absolute left-1/2 top-1/2 flex h-12 w-48 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-full bg-linear-to-r from-purple-500 to-pink-500 px-8 py-3 font-semibold text-white shadow-lg shadow-purple-500/20 transition duration-200 hover:scale-105 hover:from-purple-400 hover:to-pink-400 hover:shadow-purple-400/30 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400"
           >
             {t("about.downloadCv")}
@@ -96,7 +97,7 @@ export default function About() {
             whileDrag={{ scale: 1.04, cursor: "grabbing" }}
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-x-8 inset-y-6 z-10 flex cursor-grab touch-none select-none items-center justify-center rounded-full border border-gray-600 bg-neutral-900 px-5 text-sm text-gray-200 shadow-xl shadow-black/30"
+            className="absolute left-8 top-12 z-10 flex h-12 w-48 cursor-grab touch-none select-none items-center justify-center rounded-full border border-gray-600 bg-neutral-900 px-5 text-sm text-gray-200 shadow-xl shadow-black/30"
           >
             {t("about.moveMe")}
           </MotionDiv>
