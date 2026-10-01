@@ -9,70 +9,38 @@ export default function Header() {
   const { t, i18n } = useTranslation();
 
   useMotionValueEvent(scrollY, "change", (current) => {
-    const previous = (scrollY.getPrevious() ?? 0);
-    if (current > previous && current > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
+    const previous = scrollY.getPrevious() ?? 0;
+    setHidden(current > previous && current > 150);
   });
+
   return (
     <div className="flex justify-center overflow-visible">
       <MotionHeader
-        animate={{
-          y: hidden ? -140 : 0,
-          opacity: hidden ? 0 : 1,
-        }}
+        animate={{ y: hidden ? -140 : 0, opacity: hidden ? 0 : 1 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="flex w-screen justify-evenly py-5 bg-transparent top-0 scale-z-100
-         fixed backdrop-blur-[3px] backdrop-brightness-50 z-100"
+        className="fixed top-0 z-100 flex w-screen flex-wrap items-center justify-center gap-3 bg-transparent px-3 py-4 backdrop-blur-[3px] backdrop-brightness-50 sm:gap-5 sm:py-5"
       >
-        <a href="#home" className="text-gray-400 relative group">
-          {t("header.welcome")}
-          <span className="absolute left-1/2 bottom-0 h-px bg-gray-300 w-full -translate-x-1/2 scale-x-50 group-hover:scale-x-100 origin-center transition-transform duration-300"></span>
-        </a>
-        <a href="#about" className="text-gray-400 relative group">
-          {t("header.about")}
-          <span className="absolute left-1/2 bottom-0 h-px bg-gray-300 w-full -translate-x-1/2 scale-x-50 group-hover:scale-x-100 origin-center transition-transform duration-300"></span>
-        </a>
-        <a href="#projects" className="text-gray-400 relative group">
-          {t("projects.title")}
-          <span className="absolute left-1/2 bottom-0 h-px bg-gray-300 w-full -translate-x-1/2 scale-x-50 group-hover:scale-x-100 origin-center transition-transform duration-300"></span>
-        </a>
+        <nav className="flex flex-wrap items-center justify-center gap-3 sm:gap-5" aria-label="Primary navigation">
+          <a href="#home" className="text-gray-400 hover:text-white">{t("header.welcome")}</a>
+          <a href="#about" className="text-gray-400 hover:text-white">{t("header.about")}</a>
+          <a href="#experience" className="text-gray-400 hover:text-white">{t("header.experience")}</a>
+          <a href="#education" className="text-gray-400 hover:text-white">{t("header.education")}</a>
+          <a href="#skills" className="text-gray-400 hover:text-white">{t("header.skills")}</a>
+          <a href="#projects" className="text-gray-400 hover:text-white">{t("projects.title")}</a>
+          <a href="#contact" className="text-gray-400 hover:text-white">{t("header.contact")}</a>
+        </nav>
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => i18n.changeLanguage("en")}
-            className={`px-2 py-1 border rounded text-xs transition ${
-              i18n.language === "en"
-                ? "border-white text-white"
-                : "border-gray-500 text-gray-400"
-            }`}
-          >
-            EN
-          </button>
-          <button
-            type="button"
-            onClick={() => i18n.changeLanguage("fr")}
-            className={`px-2 py-1 border rounded text-xs transition ${
-              i18n.language === "fr"
-                ? "border-white text-white"
-                : "border-gray-500 text-gray-400"
-            }`}
-          >
-            FR
-          </button>
-          <button
-            type="button"
-            onClick={() => i18n.changeLanguage("ar")}
-            className={`px-2 py-1 border rounded text-xs transition ${
-              i18n.language === "ar"
-                ? "border-white text-white"
-                : "border-gray-500 text-gray-400"
-            }`}
-          >
-            AR
-          </button>
+          {["en", "fr", "ar"].map((language) => (
+            <button
+              key={language}
+              type="button"
+              onClick={() => i18n.changeLanguage(language)}
+              aria-label={language.toUpperCase()}
+              className={`rounded border px-2 py-1 text-xs transition ${i18n.language === language ? "border-white text-white" : "border-gray-500 text-gray-400"}`}
+            >
+              {language.toUpperCase()}
+            </button>
+          ))}
         </div>
       </MotionHeader>
     </div>

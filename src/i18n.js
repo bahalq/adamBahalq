@@ -7,7 +7,26 @@ const resources = {
       header: {
         welcome: "Welcome",
         about: "About",
+        experience: "Experience",
+        education: "Education",
+        skills: "Skills",
+        contact: "Contact",
       },
+      experience: {
+        title: "Experience",
+        items: [{ title: "Full Stack Developer Intern", organization: "SPS Technologie, Casablanca", period: "Apr 2026 – May 2026", description: "Worked on GestionRH, an HR management web app.", details: ["Frontend: React.js, Redux Toolkit, Tailwind CSS, Material UI.", "Backend: Laravel APIs with Sanctum authentication.", "MySQL, Postman, Git/GitHub.", "Contributed to the Compensation & Benefits module: salary grid, variable pay, salary benchmark."] }],
+      },
+      education: {
+        title: "Education",
+        items: [{ title: "DTS in Digital Development, Web Full Stack", organization: "OFPPT ISTA Sidi Moumen, Casablanca", period: "2024 – 2026" }, { title: "PIE, Entrepreneurial Innovation Program", organization: "OFPPT in partnership with UM6P", period: "2026" }, { title: "Baccalaureate, Physical Sciences", organization: "", period: "2024" }],
+      },
+      skills: {
+        title: "Skills",
+        labels: { frontend: "Frontend", backend: "Backend", database: "Database", tools: "Tools" },
+        groups: { frontend: ["React.js", "React Router", "Redux Toolkit", "JavaScript (ES6+)", "Tailwind CSS", "Material UI", "Framer Motion", "HTML5", "CSS3"], backend: ["PHP", "Laravel", "Laravel Sanctum", "REST API", "MVC"], database: ["MySQL", "SQL"], tools: ["Git", "GitHub", "Postman", "VS Code", "MySQL Workbench"] },
+      },
+      contact: { title: "Contact", description: "I am based in Casablanca, Morocco. You can reach me by email or through my professional profiles.", emailLabel: "Email", cityLabel: "City", city: "Casablanca, Morocco" },
+      footer: { copyright: "© 2026 Adam Bahalq" },
       hero: {
         title: "Adam Bahalq, Full Stack Developer",
         valueStatement:
@@ -109,7 +128,26 @@ const resources = {
       header: {
         welcome: "Bienvenue",
         about: "A propos",
+        experience: "Expérience",
+        education: "Formation",
+        skills: "Compétences",
+        contact: "Contact",
       },
+      experience: {
+        title: "Expérience",
+        items: [{ title: "Stagiaire développeur Full Stack", organization: "SPS Technologie, Casablanca", period: "Avr. 2026 – Mai 2026", description: "J'ai travaillé sur GestionRH, une application web de gestion des ressources humaines.", details: ["Frontend : React.js, Redux Toolkit, Tailwind CSS, Material UI.", "Backend : API Laravel avec authentification Sanctum.", "MySQL, Postman, Git/GitHub.", "Contribution au module Compensation & Benefits : grille salariale, rémunération variable, benchmark salarial."] }],
+      },
+      education: {
+        title: "Formation",
+        items: [{ title: "DTS en Développement Digital, Web Full Stack", organization: "OFPPT ISTA Sidi Moumen, Casablanca", period: "2024 – 2026" }, { title: "PIE, Programme d'innovation entrepreneuriale", organization: "OFPPT en partenariat avec l'UM6P", period: "2026" }, { title: "Baccalauréat, Sciences physiques", organization: "", period: "2024" }],
+      },
+      skills: {
+        title: "Compétences",
+        labels: { frontend: "Frontend", backend: "Backend", database: "Base de données", tools: "Outils" },
+        groups: { frontend: ["React.js", "React Router", "Redux Toolkit", "JavaScript (ES6+)", "Tailwind CSS", "Material UI", "Framer Motion", "HTML5", "CSS3"], backend: ["PHP", "Laravel", "Laravel Sanctum", "REST API", "MVC"], database: ["MySQL", "SQL"], tools: ["Git", "GitHub", "Postman", "VS Code", "MySQL Workbench"] },
+      },
+      contact: { title: "Contact", description: "Je suis basé à Casablanca, au Maroc. Vous pouvez me contacter par e-mail ou via mes profils professionnels.", emailLabel: "E-mail", cityLabel: "Ville", city: "Casablanca, Maroc" },
+      footer: { copyright: "© 2026 Adam Bahalq" },
       hero: {
         title: "Adam Bahalq, développeur Full Stack",
         valueStatement:
@@ -211,7 +249,26 @@ const resources = {
       header: {
         welcome: "\u0645\u0631\u062D\u0628\u0627",
         about: "\u0646\u0628\u0630\u0629",
+        experience: "\u0627\u0644\u062E\u0628\u0631\u0629",
+        education: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645",
+        skills: "\u0627\u0644\u0645\u0647\u0627\u0631\u0627\u062A",
+        contact: "\u062A\u0648\u0627\u0635\u0644",
       },
+      experience: {
+        title: "\u0627\u0644\u062E\u0628\u0631\u0629",
+        items: [{ title: "\u0645\u062A\u062F\u0631\u0628 \u0645\u0637\u0648\u0631 Full Stack", organization: "SPS Technologie\u060c \u0627\u0644\u062F\u0627\u0631 \u0627\u0644\u0628\u064A\u0636\u0627\u0621", period: "\u0623\u0628\u0631\u064A\u0644 2026 \u2013 \u0645\u0627\u064A\u0648 2026", description: "\u0639\u0645\u0644\u062A \u0639\u0644\u0649 GestionRH\u060c \u0648\u0647\u0648 \u062A\u0637\u0628\u064A\u0642 \u0648\u064A\u0628 \u0644\u0625\u062F\u0627\u0631\u0629 \u0627\u0644\u0645\u0648\u0627\u0631\u062F \u0627\u0644\u0628\u0634\u0631\u064A\u0629.", details: ["\u0627\u0644\u0648\u0627\u062C\u0647\u0629 \u0627\u0644\u0623\u0645\u0627\u0645\u064A\u0629: React.js \u0648Redux Toolkit \u0648Tailwind CSS \u0648Material UI.", "\u0627\u0644\u0648\u0627\u062C\u0647\u0629 \u0627\u0644\u062E\u0644\u0641\u064A\u0629: Laravel API \u0645\u0639 \u0645\u0635\u0627\u062F\u0642\u0629 Sanctum.", "MySQL \u0648Postman \u0648Git/GitHub.", "\u0633\u0627\u0647\u0645\u062A \u0641\u064A \u0648\u062D\u062F\u0629 \u0627\u0644\u062A\u0639\u0648\u064A\u0636\u0627\u062A \u0648\u0627\u0644\u0645\u0632\u0627\u064A\u0627: \u0634\u0628\u0643\u0629 \u0627\u0644\u0631\u0648\u0627\u062A\u0628\u060c \u0627\u0644\u0623\u062C\u0631 \u0627\u0644\u0645\u062A\u063A\u064A\u0631\u060c \u0648\u0645\u0642\u0627\u0631\u0646\u0629 \u0627\u0644\u0631\u0648\u0627\u062A\u0628."] }],
+      },
+      education: {
+        title: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645",
+        items: [{ title: "DTS \u0641\u064A \u0627\u0644\u062A\u0637\u0648\u064A\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u060c Web Full Stack", organization: "OFPPT ISTA Sidi Moumen\u060c \u0627\u0644\u062F\u0627\u0631 \u0627\u0644\u0628\u064A\u0636\u0627\u0621", period: "2024 \u2013 2026" }, { title: "PIE\u060c \u0628\u0631\u0646\u0627\u0645\u062C \u0627\u0644\u0627\u0628\u062A\u0643\u0627\u0631 \u0627\u0644\u0631\u064A\u0627\u062F\u064A", organization: "OFPPT \u0628\u0627\u0644\u0634\u0631\u0627\u0643\u0629 \u0645\u0639 UM6P", period: "2026" }, { title: "\u0634\u0647\u0627\u062F\u0629 \u0627\u0644\u0628\u0643\u0627\u0644\u0648\u0631\u064A\u0627\u060c \u0627\u0644\u0639\u0644\u0648\u0645 \u0627\u0644\u0641\u064A\u0632\u064A\u0627\u0626\u064A\u0629", organization: "", period: "2024" }],
+      },
+      skills: {
+        title: "\u0627\u0644\u0645\u0647\u0627\u0631\u0627\u062A",
+        labels: { frontend: "\u0627\u0644\u0648\u0627\u062C\u0647\u0629 \u0627\u0644\u0623\u0645\u0627\u0645\u064A\u0629", backend: "\u0627\u0644\u0648\u0627\u062C\u0647\u0629 \u0627\u0644\u062E\u0644\u0641\u064A\u0629", database: "\u0642\u0648\u0627\u0639\u062F \u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A", tools: "\u0627\u0644\u0623\u062F\u0648\u0627\u062A" },
+        groups: { frontend: ["React.js", "React Router", "Redux Toolkit", "JavaScript (ES6+)", "Tailwind CSS", "Material UI", "Framer Motion", "HTML5", "CSS3"], backend: ["PHP", "Laravel", "Laravel Sanctum", "REST API", "MVC"], database: ["MySQL", "SQL"], tools: ["Git", "GitHub", "Postman", "VS Code", "MySQL Workbench"] },
+      },
+      contact: { title: "\u062A\u0648\u0627\u0635\u0644 \u0645\u0639\u064A", description: "\u0623\u0642\u064A\u0645 \u0641\u064A \u0627\u0644\u062F\u0627\u0631 \u0627\u0644\u0628\u064A\u0636\u0627\u0621\u060c \u0627\u0644\u0645\u063A\u0631\u0628. \u064A\u0645\u0643\u0646\u0643 \u0627\u0644\u062A\u0648\u0627\u0635\u0644 \u0645\u0639\u064A \u0639\u0628\u0631 \u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A \u0623\u0648 \u0645\u0646 \u062E\u0644\u0627\u0644 \u0645\u0644\u0641\u0627\u062A\u064A \u0627\u0644\u0645\u0647\u0646\u064A\u0629.", emailLabel: "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A", cityLabel: "\u0627\u0644\u0645\u062F\u064A\u0646\u0629", city: "\u0627\u0644\u062F\u0627\u0631 \u0627\u0644\u0628\u064A\u0636\u0627\u0621\u060c \u0627\u0644\u0645\u063A\u0631\u0628" },
+      footer: { copyright: "© 2026 \u0622\u062F\u0645 \u0628\u062D\u0627\u0644\u0642" },
       hero: {
         title: "آدم بحالق، مطور Full Stack",
         valueStatement:
