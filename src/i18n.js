@@ -43,7 +43,7 @@ const resources = {
       about: {
         title: "About Me",
         description:
-          "I am a passionate Full Stack Web Developer focused on building scalable, modern, and high-performance web applications. I enjoy solving complex problems, optimizing performance, and continuously improving my technical expertise.",
+          "An application only has value if it solves a real problem. As a Full Stack Developer, I begin every project with one question: who is it for, and what does it make simpler? From salary grids and variable bonuses in an HR application to reservations and access control for smart parking, I build concrete solutions with React, Laravel, and MySQL, and I am looking for a team that shares this vision.",
         downloadCv: "Download CV",
         moveMe: "Move me",
       },
@@ -60,13 +60,12 @@ const resources = {
             techStack: ["Laravel 11", "React", "MySQL", "Sanctum", "REST API"],
             features: ["Three roles: Admin, Staff, Driver", "Reservation lifecycle: pending, confirmed, active, completed, cancelled, no-show", "Entry and exit logs", "Vehicle verification by QR code, license plate, RFID or manual entry", "French, Arabic and English support"],
             links: {
-              // TODO: Confirm the Parkova GitHub repository URL before publishing.
-              github: null,
+              github: "https://github.com/bahalq/frontend-parking/",
               demo: "https://bahalq.github.io/frontend-parking/",
             },
             status: "Final-year project",
             year: "2026",
-            image: import.meta.env.BASE_URL + "bookmypitch.png",
+            image: import.meta.env.BASE_URL + "Parkova.png",
           },
           {
             id: 1,
@@ -180,7 +179,7 @@ const resources = {
       about: {
         title: "A propos de moi",
         description:
-          "Je suis un developpeur web Full Stack passionne, axe sur la creation d'applications web modernes, evolutives et performantes. J'aime resoudre des problemes complexes, optimiser les performances et ameliorer en continu mon expertise technique.",
+          "Une application n'a de valeur que si elle résout un vrai problème. Développeur Full Stack, je commence chaque projet par une seule question : à qui cela sert-il, et qu'est-ce que cela simplifie ? Des grilles salariales et primes variables d'une application RH aux réservations et contrôles d'accès d'un parking intelligent, je construis avec React, Laravel et MySQL des solutions concrètes, et je recherche une équipe qui partage cette vision.",
         downloadCv: "Telecharger CV",
         moveMe: "Deplace-moi",
       },
@@ -199,7 +198,7 @@ const resources = {
             links: { github: null, demo: "https://bahalq.github.io/frontend-parking/" },
             status: "Projet de fin d'études",
             year: "2026",
-            image: import.meta.env.BASE_URL + "bookmypitch.png",
+            image: import.meta.env.BASE_URL + "Parkova.png",
           },
           {
             id: 1,
@@ -315,7 +314,7 @@ const resources = {
       about: {
         title: "\u0646\u0628\u0630\u0629 \u0639\u0646\u064A",
         description:
-          "\u0623\u0646\u0627 \u0645\u0637\u0648\u0631 \u0648\u064A\u0628 \u0645\u062A\u0643\u0627\u0645\u0644 \u0634\u063A\u0648\u0641 \u0628\u0628\u0646\u0627\u0621 \u062A\u0637\u0628\u064A\u0642\u0627\u062A \u0648\u064A\u0628 \u062D\u062F\u064A\u062B\u0629 \u0648\u0639\u0627\u0644\u064A\u0629 \u0627\u0644\u0623\u062F\u0627\u0621 \u0648\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u062A\u0648\u0633\u0639. \u0623\u0633\u062A\u0645\u062A\u0639 \u0628\u062D\u0644 \u0627\u0644\u0645\u0634\u0643\u0644\u0627\u062A \u0627\u0644\u0645\u0639\u0642\u062F\u0629\u060C \u0648\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0623\u062F\u0627\u0621\u060C \u0648\u062A\u0637\u0648\u064A\u0631 \u062E\u0628\u0631\u062A\u064A \u0627\u0644\u062A\u0642\u0646\u064A\u0629 \u0628\u0634\u0643\u0644 \u0645\u0633\u062A\u0645\u0631.",
+          "لا قيمة لأي تطبيق إن لم يحل مشكلة حقيقية. بصفتي مطور Full Stack، أبدأ كل مشروع بسؤال واحد: لمن يخدم، وما الذي يجعله أبسط؟ من شبكات الرواتب والمنح المتغيرة في تطبيق للموارد البشرية، إلى الحجوزات والتحكم في الولوج لمواقف سيارات ذكية، أبني حلولاً عملية باستخدام React وLaravel وMySQL، وأبحث عن فريق يشارك هذه الرؤية.",
         downloadCv:
           "\u062A\u062D\u0645\u064A\u0644 \u0627\u0644\u0633\u064A\u0631\u0629 \u0627\u0644\u0630\u0627\u062A\u064A\u0629",
         moveMe: "\u062D\u0631\u0651\u0643\u0646\u064A",
@@ -336,7 +335,7 @@ const resources = {
             links: { github: null, demo: "https://bahalq.github.io/frontend-parking/" },
             status: "مشروع نهاية الدراسة",
             year: "2026",
-            image: import.meta.env.BASE_URL + "bookmypitch.png",
+            image: import.meta.env.BASE_URL + "Parkova.png",
           },
           {
             id: 1,

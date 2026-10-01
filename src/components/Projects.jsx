@@ -1,73 +1,48 @@
-import { motion, useScroll, useTransform } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineLiveTv } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 export default function Projects() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const projects = t("projects.items", { returnObjects: true });
-  const isRtl = i18n.dir(i18n.language) === "rtl";
-
-  const [isDesktop, setIsDesktop] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(min-width: 768px)").matches;
-  });
-  const containerRef = useRef(null);
   const MotionDiv = motion.div;
   const MotionArticle = motion.article;
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-    const updateIsDesktop = (event) => setIsDesktop(event.matches);
-
-    mediaQuery.addEventListener("change", updateIsDesktop);
-    return () => mediaQuery.removeEventListener("change", updateIsDesktop);
-  }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["0%", `${isRtl ? "" : "-"}${(projects.length - 1) * 55}%`],
-  );
+  const MotionSection = motion.section;
 
   return (
-    <section
-      ref={containerRef}
+    <MotionSection
       id="projects"
-      className="text-white px-4 md:px-0 md:mx-10 h-auto md:h-[300vh]"
+      initial={{ opacity: 0, y: 56 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.2 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="projects-section mb-5 scroll-mt-24 px-4 py-20 text-white sm:border sm:border-white"
     >
-      <div className="md:sticky md:top-24 overflow-x-hidden">
-      <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-10 text-center md:text-left">
+      <h2 className="projects-title mb-6 text-center text-3xl font-bold md:mb-10 md:text-left md:text-5xl">
         {t("projects.title")}
       </h2>
+      <div className="projects-scroll overflow-x-auto pb-6 snap-x snap-mandatory" aria-label={t("projects.title")}>
         <MotionDiv
-          style={{ x: isDesktop ? x : 0 }}
-          className="flex flex-col md:flex-row gap-5 md:gap-6"
+          className="projects-track flex w-max flex-row gap-5 md:gap-6"
         >
           {projects.map((project) => (
             <MotionArticle
               key={project.id}
-              className="relative flex flex-col md:flex-row gap-4 border border-gray-700 p-4 md:p-5 w-full md:w-3xl"
-              style={{ flexShrink: 0 }}
+              className="project-card relative flex w-[min(88vw,48rem)] shrink-0 snap-start flex-col gap-4 border border-gray-700 p-4 md:flex-row md:p-5"
             >
-              <p className="text-xs md:text-sm self-end md:absolute md:top-3 md:right-3">
+              <p className="project-year text-xs md:text-sm self-end md:absolute md:top-3 md:right-3">
                 {project.year}
               </p>
 
-              <div className="flex flex-col w-full md:w-auto justify-around items-center gap-3">
+              <div className="project-visual flex flex-col w-full md:w-auto justify-around items-center gap-3">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="border-gray-700 border rounded-lg w-full md:w-80 max-w-full h-auto object-cover"
+                  className="project-image border-gray-700 border rounded-lg w-full md:w-80 max-w-full h-auto object-cover"
                 />
 
-                <div className="flex flex-wrap gap-2.5 justify-center md:justify-start w-full">
+                <div className="project-actions flex flex-wrap gap-2.5 justify-center md:justify-start w-full">
                   {project.links.github ? (
                     <a
                       href={project.links.github}
@@ -98,24 +73,24 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2 min-w-0">
-                <h3 className="font-bold uppercase bg-linear-to-r from-blue-700 via-green-700 to-yellow-900 bg-clip-text text-transparent text-lg md:text-xl">
+              <div className="project-content flex flex-col gap-2 min-w-0">
+                <h3 className="project-name font-bold uppercase bg-linear-to-r from-blue-700 via-green-700 to-yellow-900 bg-clip-text text-transparent text-lg md:text-xl">
                   {project.name}
                 </h3>
 
-                <p className="text-sm text-purple-300">{project.status}</p>
+                <p className="project-status text-sm text-purple-300">{project.status}</p>
 
-                <p className="font-semibold text-sm md:text-base">
+                <p className="project-description font-semibold text-sm md:text-base">
                   {project.description}
                 </p>
 
-                <ul className="list-disc space-y-1 pl-5 text-sm text-gray-300">
+                <ul className="project-features list-disc space-y-1 pl-5 text-sm text-gray-300">
                   {project.features.map((feature) => (
                     <li key={`${project.id}-${feature}`}>{feature}</li>
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-1.5 text-sm">
+                <div className="project-tech flex flex-wrap gap-1.5 text-sm">
                   {project.techStack.map((tech) => (
                     <div
                       key={`${project.id}-${tech}`}
@@ -130,6 +105,6 @@ export default function Projects() {
           ))}
         </MotionDiv>
       </div>
-    </section>
+    </MotionSection>
   );
 }

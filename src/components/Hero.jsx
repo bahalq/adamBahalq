@@ -12,7 +12,7 @@ export default function Hero() {
       <MotionDiv
         animate={{ x: ["30%", "-50%"] }}
         transition={{ duration: 6, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute sm:w-150 w-[50%] sm:h-150 bg-purple-700/30 blur-[150px] 
+        className="pointer-events-none absolute sm:w-150 w-[50%] sm:h-150 bg-purple-700/30 blur-[150px] 
       rounded-full top-1/5 left-1/3"
       ></MotionDiv>
       <MotionDiv
@@ -40,9 +40,6 @@ group-hover:blur-[15px] rounded-full bg-linear-to-tr
             ></div>
           </div>
           <div className="flex flex-col">
-            <h1 className="max-w-2xl text-center text-4xl font-extrabold leading-tight text-white md:text-left md:text-5xl">
-              {t("hero.title")}
-            </h1>
             <TypeAnimation
               key={i18n.language}
               sequence={[
@@ -63,17 +60,10 @@ group-hover:blur-[15px] rounded-full bg-linear-to-tr
             </p>
           </div>
         </div>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href={import.meta.env.BASE_URL + "Adam_Bahalq_CV_2026.pdf"}
-            download
-            className="flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:bg-gray-300"
-          >
-            {t("hero.downloadCv")}
-          </a>
+        <div className="relative z-10 mt-10 flex flex-wrap justify-center gap-4">
           <a
             href="#contact"
-            className="flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-gray-300 transition hover:bg-white hover:text-black"
+            className="mt-10 px-6 py-3 border scale-95 hover:scale-100 cursor-pointer border-white/20 rounded-full text-gray-300 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2"
           >
             <IoIosContact />
             {t("hero.contactMe")}

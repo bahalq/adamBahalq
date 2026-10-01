@@ -16,3 +16,125 @@
         width: 11ch;
     }
 } */
+.projects-section {
+  width: auto;
+  max-width: none;
+  margin-inline: 0;
+}
+
+.projects-scroll {
+  scrollbar-color: #4b5563 transparent;
+  scrollbar-width: thin;
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.78), rgba(3, 7, 18, 0.88));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+  transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.project-card:hover {
+  border-color: rgba(129, 140, 248, 0.72);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.project-year {
+  color: #9ca3af;
+  letter-spacing: 0.08em;
+}
+
+.project-image {
+  aspect-ratio: 16 / 10;
+}
+
+@media (min-width: 640px) {
+  .projects-section {
+    margin-inline: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-section {
+    padding-inline: 2rem;
+  }
+
+  .projects-title {
+    margin-inline: 0.5rem;
+  }
+
+  .projects-scroll {
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .projects-track {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    width: auto;
+    min-width: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: minmax(170px, 0.78fr) minmax(0, 1.22fr);
+    align-items: start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .project-year {
+    top: 1.25rem;
+    right: auto;
+    inset-inline-end: 1.25rem;
+  }
+
+  .project-visual {
+    width: 100%;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: 0.25rem;
+  }
+
+  .project-image {
+    width: 100%;
+    max-width: none;
+  }
+
+  .project-actions {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .project-content {
+    min-width: 0;
+    padding-top: 0.15rem;
+    padding-inline-end: 1.75rem;
+  }
+
+  .project-name {
+    padding-inline-end: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .projects-section {
+    padding-inline: 3rem;
+  }
+
+  .projects-track {
+    gap: 1.75rem;
+  }
+
+  .project-card {
+    grid-template-columns: minmax(200px, 0.82fr) minmax(0, 1.18fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}

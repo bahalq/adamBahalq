@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 
 function Timeline({ items }) {
   return (
@@ -26,30 +27,43 @@ export default function ProfileSections() {
   const education = t("education.items", { returnObjects: true });
   const experience = t("experience.items", { returnObjects: true });
   const skillGroups = t("skills.groups", { returnObjects: true });
+  const MotionSection = motion.section;
+  const revealProps = {
+    initial: { opacity: 0, y: 56 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { amount: 0.2 },
+    transition: { duration: 0.7, ease: "easeOut" },
+  };
 
   return (
-    <div className="space-y-24 px-6 py-24 text-white md:px-10 lg:px-20">
-      <section id="experience" className="mx-auto max-w-5xl scroll-mt-24">
-        <h2 className="mb-10 text-3xl font-bold md:text-5xl">{t("experience.title")}</h2>
-        <Timeline items={experience} />
-      </section>
-      <section id="education" className="mx-auto max-w-5xl scroll-mt-24">
-        <h2 className="mb-10 text-3xl font-bold md:text-5xl">{t("education.title")}</h2>
-        <Timeline items={education} />
-      </section>
-      <section id="skills" className="mx-auto max-w-5xl scroll-mt-24">
-        <h2 className="mb-10 text-3xl font-bold md:text-5xl">{t("skills.title")}</h2>
-        <div className="grid gap-6 md:grid-cols-2">
-          {Object.entries(skillGroups).map(([group, skills]) => (
-            <article key={group} className="rounded-2xl border border-gray-700 bg-gray-950/60 p-6">
-              <h3 className="mb-4 text-xl font-bold text-purple-300">{t(`skills.labels.${group}`)}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => <span key={skill} className="rounded-full border border-gray-700 px-3 py-1 text-sm text-gray-300">{skill}</span>)}
-              </div>
-            </article>
-          ))}
+    <div className="space-y-5 py-5 text-white">
+      <MotionSection {...revealProps} id="experience" className="scroll-mt-24 px-6 py-24 sm:mx-5 sm:border sm:border-white md:px-10 lg:px-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-10 text-3xl font-bold md:text-5xl">{t("experience.title")}</h2>
+          <Timeline items={experience} />
         </div>
-      </section>
+      </MotionSection>
+      <MotionSection {...revealProps} id="education" className="scroll-mt-24 px-6 py-24 sm:mx-5 sm:border sm:border-white md:px-10 lg:px-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-10 text-3xl font-bold md:text-5xl">{t("education.title")}</h2>
+          <Timeline items={education} />
+        </div>
+      </MotionSection>
+      <MotionSection {...revealProps} id="skills" className="scroll-mt-24 px-6 py-24 sm:mx-5 sm:border sm:border-white md:px-10 lg:px-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-10 text-3xl font-bold md:text-5xl">{t("skills.title")}</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {Object.entries(skillGroups).map(([group, skills]) => (
+              <article key={group} className="rounded-2xl border border-gray-700 bg-gray-950/60 p-6">
+                <h3 className="mb-4 text-xl font-bold text-purple-300">{t(`skills.labels.${group}`)}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill) => <span key={skill} className="rounded-full border border-gray-700 px-3 py-1 text-sm text-gray-300">{skill}</span>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </MotionSection>
     </div>
   );
 }
