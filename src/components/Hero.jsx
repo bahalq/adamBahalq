@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   const MotionDiv = motion.div;
-  const MotionA = motion.a;
   const { t, i18n } = useTranslation();
 
   return (
@@ -41,6 +40,9 @@ group-hover:blur-[15px] rounded-full bg-linear-to-tr
             ></div>
           </div>
           <div className="flex flex-col">
+            <h1 className="max-w-2xl text-center text-4xl font-extrabold leading-tight text-white md:text-left md:text-5xl">
+              {t("hero.title")}
+            </h1>
             <TypeAnimation
               key={i18n.language}
               sequence={[
@@ -56,15 +58,27 @@ group-hover:blur-[15px] rounded-full bg-linear-to-tr
               text-center pr-4 text-5xl select-none"
               cursor={true}
             />{" "}
+            <p className="mt-5 max-w-xl text-center text-base leading-relaxed text-gray-300 md:text-left md:text-lg">
+              {t("hero.valueStatement")}
+            </p>
           </div>
         </div>
-        <a
-          href="#contact"
-          className="mt-10 px-6 py-3 border scale-95 hover:scale-100 cursor-pointer border-white/20 rounded-full text-gray-300 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2"
-        >
-          <IoIosContact />
-          {t("hero.contacts")}
-        </a>
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <a
+            href={import.meta.env.BASE_URL + "Adam_Bahalq_CV_2026.pdf"}
+            download
+            className="flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:bg-gray-300"
+          >
+            {t("hero.downloadCv")}
+          </a>
+          <a
+            href="#contact"
+            className="flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-gray-300 transition hover:bg-white hover:text-black"
+          >
+            <IoIosContact />
+            {t("hero.contactMe")}
+          </a>
+        </div>
       </MotionDiv>
     </>
   );

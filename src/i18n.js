@@ -9,12 +9,17 @@ const resources = {
         about: "About",
       },
       hero: {
+        title: "Adam Bahalq, Full Stack Developer",
+        valueStatement:
+          "An application is only worth building if it solves a real problem. I start every project with one question: who is this for, and what does it make simpler?",
         sequence: {
           welcome: "Welcome to my portfolio",
           name: "I am Adam Bahalq",
           role: "I am a Full Stack Developer",
         },
         contacts: "My Contacts",
+        downloadCv: "Download CV",
+        contactMe: "Contact me",
       },
       about: {
         title: "About Me",
@@ -106,12 +111,17 @@ const resources = {
         about: "A propos",
       },
       hero: {
+        title: "Adam Bahalq, développeur Full Stack",
+        valueStatement:
+          "Une application ne mérite d'être créée que si elle résout un vrai problème. Je commence chaque projet par une question : à qui s'adresse-t-elle et que rend-elle plus simple ?",
         sequence: {
           welcome: "Bienvenue sur mon portfolio",
           name: "Je suis Adam Bahalq",
           role: "Je suis Developpeur Full Stack",
         },
         contacts: "Mes contacts",
+        downloadCv: "Télécharger le CV",
+        contactMe: "Me contacter",
       },
       about: {
         title: "A propos de moi",
@@ -203,6 +213,9 @@ const resources = {
         about: "\u0646\u0628\u0630\u0629",
       },
       hero: {
+        title: "آدم بحالق، مطور Full Stack",
+        valueStatement:
+          "لا تستحق أيّ application أن تُبنى إلا إذا حلّت مشكلة حقيقية. أبدأ كل مشروع بسؤال واحد: لمن هذا المشروع، وما الذي سيجعله أبسط؟",
         sequence: {
           welcome:
             "\u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0645\u0644\u0641 \u0623\u0639\u0645\u0627\u0644\u064A",
@@ -211,6 +224,8 @@ const resources = {
         },
         contacts:
           "\u062C\u0647\u0627\u062A \u0627\u0644\u0627\u062A\u0635\u0627\u0644",
+        downloadCv: "تحميل السيرة الذاتية",
+        contactMe: "تواصل معي",
       },
       about: {
         title: "\u0646\u0628\u0630\u0629 \u0639\u0646\u064A",
