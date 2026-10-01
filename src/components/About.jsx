@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useFrame } from "@react-three/fiber";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 function InfoModel() {
@@ -29,50 +28,11 @@ function InfoModel() {
   );
 }
 
-function MagneticButton({ label }) {
-  const MotionA = motion.a;
-  const ref = useRef();
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const smoothX = useSpring(x, { stiffness: 250, damping: 20 });
-  const smoothY = useSpring(y, { stiffness: 250, damping: 20 });
-
-  const handleMouseMove = (e) => {
-    const { left, top, width, height } = ref.current.getBoundingClientRect();
-    const mx = e.clientX - (left + width / 2);
-    const my = e.clientY - (top + height / 2);
-
-    x.set(mx * 0.2);
-    y.set(my * 0.2);
-  };
-
-  const reset = () => {
-    x.set(0);
-    y.set(0);
-  };
-
-  return (
-    <MotionA
-      href={import.meta.env.BASE_URL + "Adam_Bahalq_CV_2026.pdf"}
-      download
-      initial={{ opacity: 0, y: 80 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={reset}
-      style={{ x: smoothX, y: smoothY }}
-      className="px-8 py-3 cursor-pointer bg-linear-to-r box-border from-purple-500 to-pink-500 rounded-full transition duration-200"
-    >
-      {label}
-    </MotionA>
-  );
-}
-
 export default function About() {
   const MotionDiv = motion.div;
   const MotionP = motion.p;
   const { t } = useTranslation();
+  const moveAreaRef = useRef(null);
 
   return (
     <div
@@ -120,19 +80,24 @@ export default function About() {
           ))}
         </MotionDiv>
 
-        <div className="relative w-fit h-fit box-border py-3 ">
-          <MagneticButton label={t("about.downloadCv")} />
+        <div ref={moveAreaRef} className="relative h-36 w-64">
+          <a
+            href={import.meta.env.BASE_URL + "Adam_Bahalq_CV_2026.pdf"}
+            target="_blank"
+            rel="noreferrer"
+            className="absolute left-1/2 top-1/2 flex h-12 w-48 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-full bg-linear-to-r from-purple-500 to-pink-500 px-8 py-3 font-semibold text-white shadow-lg shadow-purple-500/20 transition duration-200 hover:scale-105 hover:from-purple-400 hover:to-pink-400 hover:shadow-purple-400/30 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400"
+          >
+            {t("about.downloadCv")}
+          </a>
           <MotionDiv
-            animate={{ y: [0, -10, 0] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            drag="y"
-            dragConstraints={{ top: -40, bottom: 40 }}
-            className="absolute z-10 w-full h-full top-0 left-0 bg-neutral-900 flex
-  items-center justify-center border rounded-full cursor-grab"
+            drag
+            dragConstraints={moveAreaRef}
+            dragElastic={0.15}
+            dragMomentum={false}
+            whileDrag={{ scale: 1.04, cursor: "grabbing" }}
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute left-8 top-12 z-10 flex h-12 w-48 cursor-grab touch-none select-none items-center justify-center rounded-full border border-gray-600 bg-neutral-900 px-5 text-sm text-gray-200 shadow-xl shadow-black/30"
           >
             {t("about.moveMe")}
           </MotionDiv>
