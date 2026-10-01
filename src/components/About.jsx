@@ -128,9 +128,8 @@ export default function About() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            drag="y"
-            dragConstraints={{ top: -40, bottom: 40 }}
-            className="absolute z-10 w-full h-full top-0 left-0 bg-neutral-900 flex
+            aria-hidden="true"
+            className="pointer-events-none absolute z-10 w-full h-full top-0 left-0 bg-neutral-900 flex
   items-center justify-center border rounded-full cursor-grab"
           >
             {t("about.moveMe")}

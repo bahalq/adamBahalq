@@ -28,6 +28,7 @@ export default function Hero() {
           <div className="w-fi h-[40vh] relative group aspect-square">
             <img
               src={import.meta.env.BASE_URL + "adam2.png"}
+              alt="Adam Bahalq"
               draggable={false}
               onDragStart={(e) => e.preventDefault()}
               className="aspect-square select-none h-[40vh] rounded-full border border-gray-700
@@ -57,7 +58,10 @@ group-hover:blur-[15px] rounded-full bg-linear-to-tr
             />{" "}
           </div>
         </div>
-        <a className="mt-10 px-6 py-3 border scale-95 hover:scale-100 cursor-pointer border-white/20 rounded-full text-gray-300 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2">
+        <a
+          href="#contact"
+          className="mt-10 px-6 py-3 border scale-95 hover:scale-100 cursor-pointer border-white/20 rounded-full text-gray-300 hover:bg-white hover:text-black transition duration-300 flex items-center gap-2"
+        >
           <IoIosContact />
           {t("hero.contacts")}
         </a>
