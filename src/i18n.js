@@ -51,7 +51,23 @@ const resources = {
         title: "My Projects",
         github: "Github",
         demoLive: "Live Demo",
+        codePending: "Code link pending",
         items: [
+          {
+            id: 10,
+            name: "Parkova",
+            description: "A smart parking and traffic management system developed as the final-year project of the DTS.",
+            techStack: ["Laravel 11", "React", "MySQL", "Sanctum", "REST API"],
+            features: ["Three roles: Admin, Staff, Driver", "Reservation lifecycle: pending, confirmed, active, completed, cancelled, no-show", "Entry and exit logs", "Vehicle verification by QR code, license plate, RFID or manual entry", "French, Arabic and English support"],
+            links: {
+              // TODO: Confirm the Parkova GitHub repository URL before publishing.
+              github: null,
+              demo: "https://bahalq.github.io/frontend-parking/",
+            },
+            status: "Final-year project",
+            year: "2026",
+            image: import.meta.env.BASE_URL + "bookmypitch.png",
+          },
           {
             id: 1,
             name: "Zizou",
@@ -171,8 +187,20 @@ const resources = {
       projects: {
         title: "Mes Projets",
         github: "Github",
+        codePending: "Lien du code à ajouter",
         demoLive: "Démo Live",
         items: [
+          {
+            id: 10,
+            name: "Parkova",
+            description: "Un système intelligent de gestion du stationnement et du trafic, réalisé comme projet de fin d'études du DTS.",
+            techStack: ["Laravel 11", "React", "MySQL", "Sanctum", "REST API"],
+            features: ["Trois rôles : administrateur, agent et conducteur", "Cycle de réservation : en attente, confirmée, active, terminée, annulée, no-show", "Journaux d'entrée et de sortie", "Vérification du véhicule par QR code, plaque d'immatriculation, RFID ou saisie manuelle", "Prise en charge du français, de l'arabe et de l'anglais"],
+            links: { github: null, demo: "https://bahalq.github.io/frontend-parking/" },
+            status: "Projet de fin d'études",
+            year: "2026",
+            image: import.meta.env.BASE_URL + "bookmypitch.png",
+          },
           {
             id: 1,
             name: "Zizou",
@@ -296,10 +324,23 @@ const resources = {
         title: "\u0645\u0634\u0627\u0631\u064A\u0639\u064A",
         github: "\u062C\u064A\u062A\u0647\u0628",
         demoLive: "\u0639\u0631\u0636 \u062D\u064A",
+        codePending: "\u0631\u0627\u0628\u0637 \u0627\u0644\u0643\u0648\u062F \u0642\u064A\u062F \u0627\u0644\u0625\u0636\u0627\u0641\u0629",
         items: [
           {
             id: 1,
-            name: "bookMyPitch",
+            name: "Parkova",
+            description:
+              "\u0646\u0638\u0627\u0645 \u0645\u062A\u0643\u0627\u0645\u0644 \u0644\u062D\u062C\u0632 \u0627\u0644\u0645\u0644\u0627\u0639\u0628 \u0627\u0644\u0631\u064A\u0627\u0636\u064A\u0629 \u064A\u062A\u0636\u0645\u0646 \u062A\u0648\u0641\u0631 \u0627\u0644\u0623\u0648\u0642\u0627\u062A \u0628\u0634\u0643\u0644 \u0641\u0648\u0631\u064A \u0648\u0645\u0633\u0627\u0631 \u062D\u062C\u0632 \u062F\u064A\u0646\u0627\u0645\u064A\u0643\u064A \u0645\u0646 6 \u062E\u0637\u0648\u0627\u062A.",
+            techStack: ["Laravel 11", "React", "MySQL", "Sanctum", "REST API"],
+            features: ["ثلاثة أدوار: المسؤول والموظف والسائق", "دورة الحجز: قيد الانتظار، مؤكد، نشط، مكتمل، ملغى، عدم الحضور", "سجلات الدخول والخروج", "التحقق من المركبة عبر رمز QR أو لوحة الترقيم أو RFID أو الإدخال اليدوي", "دعم الفرنسية والعربية والإنجليزية"],
+            links: { github: null, demo: "https://bahalq.github.io/frontend-parking/" },
+            status: "مشروع نهاية الدراسة",
+            year: "2026",
+            image: import.meta.env.BASE_URL + "bookmypitch.png",
+          },
+          {
+            id: 1,
+            name: "Zizou",
             description:
               "\u0646\u0638\u0627\u0645 \u0645\u062A\u0643\u0627\u0645\u0644 \u0644\u062D\u062C\u0632 \u0627\u0644\u0645\u0644\u0627\u0639\u0628 \u0627\u0644\u0631\u064A\u0627\u0636\u064A\u0629 \u064A\u062A\u0636\u0645\u0646 \u062A\u0648\u0641\u0631 \u0627\u0644\u0623\u0648\u0642\u0627\u062A \u0628\u0634\u0643\u0644 \u0641\u0648\u0631\u064A \u0648\u0645\u0633\u0627\u0631 \u062D\u062C\u0632 \u062F\u064A\u0646\u0627\u0645\u064A\u0643\u064A \u0645\u0646 6 \u062E\u0637\u0648\u0627\u062A.",
             techStack: ["React", "Tailwind CSS", "PHP", "MySQL", "REST API"],

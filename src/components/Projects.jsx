@@ -68,7 +68,7 @@ export default function Projects() {
                 />
 
                 <div className="flex flex-wrap gap-2.5 justify-center md:justify-start w-full">
-                  {project.links.github && (
+                  {project.links.github ? (
                     <a
                       href={project.links.github}
                       target="_blank"
@@ -78,6 +78,10 @@ export default function Projects() {
                       <FaGithub />
                       {t("projects.github")}
                     </a>
+                  ) : (
+                    <span className="rounded-full border border-dashed border-gray-600 px-3 py-2 text-sm text-gray-500">
+                      {t("projects.codePending")}
+                    </span>
                   )}
 
                   {project.links.demo && (
@@ -99,9 +103,17 @@ export default function Projects() {
                   {project.name}
                 </h3>
 
+                <p className="text-sm text-purple-300">{project.status}</p>
+
                 <p className="font-semibold text-sm md:text-base">
                   {project.description}
                 </p>
+
+                <ul className="list-disc space-y-1 pl-5 text-sm text-gray-300">
+                  {project.features.map((feature) => (
+                    <li key={`${project.id}-${feature}`}>{feature}</li>
+                  ))}
+                </ul>
 
                 <div className="flex flex-wrap gap-1.5 text-sm">
                   {project.techStack.map((tech) => (
