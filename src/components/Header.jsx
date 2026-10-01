@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {

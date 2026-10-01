@@ -1,7 +1,6 @@
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { IoIosContact } from "react-icons/io";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
